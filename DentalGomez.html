@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DentalGomezhn</title>
+    <meta name="description" content="Dental Gómez, clínica dental en La Esperanza, Honduras. Ofrecemos odontología general, ortodoncia, endodoncia, cirugía dental, periodoncia y odontopediatría con atención profesional y personalizada.">
+    <meta name="keywords" content="dental gomez, clinica dental, La Esperanza, Honduras, odontología, ortodoncia, endodoncia, dentista">
+    <meta name="author" content="Dra. Daryl Gómez">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+    emailjs.init("BICeYe1b6XgMLDFEP");
+    </script>
+</head>
+
+<body>
+
+    <div id="overlay-privacidad">
+        <div id="popup-privacidad">
+            <h2>Aviso de Privacidad</h2>
+            <p>
+                En <strong>Dental Gómez</strong> nos comprometemos a proteger tu información personal.
+                Los datos que nos proporciones a través del formulario de contacto serán utilizados
+                <strong>únicamente para responder a tu consulta</strong> y no serán compartidos con terceros.
+            </p>
+            <p>
+                Al continuar navegando en este sitio, aceptas nuestra política de privacidad y el uso
+                de tus datos con los fines descritos anteriormente.
+            </p>
+            <div id="mensaje-rechazo">
+                Para usar este sitio es necesario aceptar la política de privacidad.
+            </div>
+            <div class="popup-botones">
+                <button id="btn-aceptar" onclick="aceptarPrivacidad()">Aceptar</button>
+                <button id="btn-rechazar" onclick="rechazarPrivacidad()">Rechazar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="ordenTextoImagen">
+            <div class="dienteLogo">
+                <img src="Imagenes Principales/logos/DienteLogo.png" alt="Logo Dental Gomez">
+            </div>
+            <div class="headerTexto">
+                <h1>DENTAL GOMEZ</h1>
+                <h2>Clinica dental</h2>
+            </div>
+        </div>     
+
+        <nav>
+            <ul>
+                <li><a href="#pantalla2">Nosotros</a></li>
+                <li><a href="#pantalla3">Servicios</a></li>
+                <li><a href="#pantalla4">Preguntas</a></li>
+                <li><a href="#pantalla5">Opiniones</a></li>
+                <li><a href="#pantalla6">Ubicación</a></li>
+                <li><a href="#pantalla7">Contáctanos</a></li>   
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="inicio">
+        <div class="fotoLogo">
+          <img src="Imagenes Principales/logos/foto inicio.png" alt="Logo Dental Gomez">
+        </div>
+
+        
+    </div>
+
+    <div id="pantalla2" class="pantalla2">
+        <div class="textoPregunta">
+            <h1>¿Por qué elegir Dental Gómez?</h1>
+        </div>
+
+        <div class="bloqueEleccion">
+            
+            <div class="informacionEleccion ">
+
+                <p>
+                    ¡Porque estás en las mejores manos! <br>
+                    En Dental Gómez la salud bucal se atiende con compromiso, precisión y un enfoque humano que prioriza siempre el bienestar del paciente.<br>
+                    ¡Cada sonrisa es única! Por eso recibe una atención personalizada, con criterio profesional que busca resultados seguros, funcionales y duraderos.<br>
+                    La experiencia del paciente es una prioridad, por eso cada visita se desarrolla en un entorno cómodo, seguro y con la tranquilidad de estar siendo atendido con responsabilidad y cuidado.<br>
+                    Nos basamos en la confianza, la calidad y la dedicación en cada detalle, entendiendo que la salud bucal es parte fundamental del bienestar general.<br>
+                    ¡Porque una buena atención no solo mejora sonrisas, también genera confianza!
+                </p>
+
+            </div>
+
+            <div class="fotoDraCarrusel">
+                <div class="tren">
+                    <img src="Imagenes Principales/Dra Daryl/draDaryl.png">
+                    <img src="Imagenes Principales/Dra Daryl/draDaryl1 (1).jpeg">
+                    <img src="Imagenes Principales/Dra Daryl/draDaryl1 (2).jpeg">
+                    <img src="Imagenes Principales/Dra Daryl/draDaryl1 (3).jpeg">
+                    <img src="Imagenes Principales/Dra Daryl/draDaryl.png">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="pantalla3" class="pantalla3">
+        <div class="tituloPantalla3">
+            <h1>Te ofrecemos...</h1>
+        </div>
+
+        <div class="Servicios">
+
+            <div class="fila1">
+                <div class="odontoGeneral">
+                    <img src="Imagenes Principales/logos/odontoGeneral.jpeg">
+                    <a href="Paginas de Servicios/Odontologia General/odontoGeneral.html" target="_blank">
+                        <button class="btn-boton">Odontología General</button>
+                    </a>
+                </div>
+
+                <div class="ortodoncia">
+                    <img src="Imagenes Principales/logos/ortodoncia.jpeg">
+                    <a href="Paginas de Servicios/Ortodoncia/ortodoncia.html" target="_blank">
+                        <button class="btn-boton">Ortodoncia</button>
+                    </a>
+                </div>
+
+                <div class="endodoncia">
+                    <img src="Imagenes Principales/logos/endodoncia.jpeg">
+                    <a href="Paginas de Servicios/Endodoncia/endodoncia.html" target="_blank">
+                        <button class="btn-boton">Endodoncia</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="fila2">
+                <div class="cirugiaOral">
+                    <img src="Imagenes Principales/logos/cirugiaOral.jpeg">
+                    <a href="Paginas de Servicios/Cirugia Oral/cirugiaOral.html" target="_blank">
+                        <button class="btn-boton">Cirugia Dental</button>
+                    </a>
+                </div>
+
+                <div class="periodoncia">
+                    <img src="Imagenes Principales/logos/periodoncia.jpeg">
+                    <a href="Paginas de Servicios/Periodoncia/periodoncia.html" target="_blank">
+                        <button class="btn-boton">Periodoncia</button>
+                    </a>
+                </div>
+
+                <div class="odontopediatria">
+                    <img src="Imagenes Principales/logos/odontopediatria.jpeg">
+                    <a href="Paginas de Servicios/Odontopediatria/odontopediatria.html" target="_blank">
+                        <button class="btn-boton">Odontopediatria</button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="pantalla4" class="pantalla4">
+            
+            <div class="tituloPantalla4">
+                <h1>PREGUNTAS FRECUENTES...</h1>
+            </div>
+
+            <div class="faq">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Cada cuánto debo visitar al dentista?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Lo ideal es acudir al dentista cada 6 meses para revisión y limpieza dental. 
+                        Esto ayuda a prevenir caries, enfermedades de las encías y detectar problemas a 
+                        tiempo. En algunos casos, el odontólogo puede recomendar controles 
+                        más frecuentes según la salud bucal del paciente.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿La limpieza dental duele?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La limpieza dental profesional generalmente no duele. Puede generar una ligera sensibilidad 
+                        si hay acumulación de sarro o encías inflamadas, pero es un procedimiento seguro, rápido y bien tolerado por la mayoría de los pacientes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Qué debo hacer en caso de dolor de muela?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>En caso de dolor de muela, lo más importante es acudir al dentista lo antes posible para identificar la causa. 
+                        Mientras tanto, evita alimentos muy fríos, calientes o duros. No se recomienda automedicarse sin indicación profesional.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Atienden emergencias dentales?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, en la clínica atendemos emergencias dentales como dolor intenso, infecciones, fracturas dentales, inflamación o cualquier situación que requiera atención inmediata. 
+                        Recomendamos comunicarse lo antes posible para poder brindarte una atención rápida y evitar que el problema avance o empeore.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿El blanqueamiento dental daña los dientes?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No, el blanqueamiento dental es seguro cuando es realizado por un profesional. 
+                        Puede causar sensibilidad temporal, pero no daña el esmalte dental ni la estructura del diente.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿A partir de qué edad pueden atender a niños?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Atendemos niños desde la aparición del primer diente o alrededor del primer año de vida. 
+                        Las visitas tempranas ayudan a prevenir problemas y a crear hábitos de higiene dental desde pequeños.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Qué métodos de pago aceptan?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aceptamos diferentes formas de pago para tu comodidad: efectivo, transferencias bancarias y tarjetas de débito o crédito (según disponibilidad). 
+                        Nuestro objetivo es facilitar el acceso a los tratamientos dentales.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Necesito cita previa?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No es obligatorio tener cita previa. Puedes llegar con cita programada o sin cita, según tu disponibilidad. 
+                        Sin embargo, recomendamos agendar cita para brindarte una atención más rápida y organizada. 
+                        En casos de emergencia, se atiende de inmediato según disponibilidad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Cuánto dura una consulta dental?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Una consulta dental general dura aproximadamente entre 30 y 60 minutos, dependiendo del diagnóstico y el tratamiento necesario.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Es seguro el tratamiento dental durante el embarazo?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, los tratamientos dentales son seguros durante el embarazo. 
+                        Es importante informar al odontólogo sobre el estado de gestación para adaptar los procedimientos y garantizar la seguridad de la madre y el bebé.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Cuál es el horario de atención?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p> Nuestro horario de atención es de lunes a sábado de 9:00 a.m. a 5:00 p.m. 
+                            Durante este tiempo puedes visitarnos con o sin cita previa. 
+                            Te recomendamos acudir con anticipación para una atención más rápida y organizada.</p>
+                    </div>
+                </div>
+
+
+            </div>
+    </div>
+
+    <div id="pantalla5" class="pantalla5">
+
+        <div class="tituloPantalla5">
+            <h1>¿QUE DICEN NUESTROS PACIENTES?</h1>
+        </div>
+
+        <div class="redireccionGoogle">
+            <div class="google-box">
+                <div class="google-rating">
+                    <img src="Imagenes Principales/logos/googleLogo.webp">
+                    <strong> Reseñas</strong>
+                </div>
+                <a class="btn-google" href="https://www.google.com/search?q=dental+gomez+clinica+dental+La+esperanza" target="_blank">
+                    Revisanos en Google
+                </a>
+            </div>
+        </div>
+
+        <div class="resenas-outer">
+
+            <button class="btn-resenas" onclick="moverResenas(-1)">&#10094;</button>
+
+            <div class="resenas-wrapper">
+                <div class="resenas">
+
+                    <div class="re1">
+                        <div class="targeta">
+                            <div class="conteh1p">
+                                <img src="Imagenes Principales/PerfilesResenas/JSolano.jpg">
+                                <h3>Jennifer Solano</h3>
+                            </div>
+                            <div class="star"><img src="Imagenes Principales/logos/stars.PNG"></div>
+                            <p class="recortar">
+                                Desde la primer visita se nota la calidad del servicio 👌👌👌<br>
+                                La atención es muy cordial y te hacen sentir comodo en todo momento, me gustó mucho que se toman el tiempo para explicar cada paso y responder cualquier duda 🙂‍↕️🙂‍↕️<br>
+                                El lugar está bien cuidado, quedé muy conforme con el resultado y definitivamente volvería y la recomiendo al 100% 👌👌💯💯
+                            </p>
+                            <button class="btn-leer-mas" onclick="leerMas(this)">Leer más</button>
+                        </div>
+
+                        <div class="targeta">
+                            <div class="conteh1p">
+                                <img src="Imagenes Principales/PerfilesResenas/AReyes.jpeg">
+                                <h3>Anna Rodriguez</h3>
+                            </div>
+                            <div class="star"><img src="Imagenes Principales/logos/stars.PNG"></div>
+                            <p>
+                                Excelente clínica!!! Atienden de forma integral toda la salud dental 👌🏼👌🏼
+                            </p>
+                        </div>
+
+                        <div class="targeta">
+                            <div class="conteh1p">
+                                <img src="Imagenes Principales/PerfilesResenas/DGomez.jpeg">
+                                <h3>Dannyj. exe</h3>
+                            </div>
+                            <div class="star"><img src="Imagenes Principales/logos/stars.PNG"></div>
+                            <p class="recortar">
+                                Excelente atención y muy buen servicio.<br>
+                                Desde que uno llega, la Dra transmite amabilidad, profesionalismo y confianza. La clínica se mira limpia, ordenada y moderna, y explica cada procedimiento de forma clara, lo cual da mucha tranquilidad. Quedé muy satisfecho con el trato y con los resultados.<br>
+                                Sin duda es una clínica dental muy recomendable para quienes buscan atención de calidad.
+                            </p>
+                            <button class="btn-leer-mas" onclick="leerMas(this)">Leer más</button>
+                        </div>
+                    </div>
+
+                    <div class="re2">
+                        <div class="targeta">
+                            <div class="conteh1p">
+                                <img src="Imagenes Principales/PerfilesResenas/KSilva.jpg">
+                                <h3>Katherin Janneth Silva</h3>
+                            </div>
+                            <div class="star"><img src="Imagenes Principales/logos/stars.PNG"></div>
+                            <p>
+                                Valoro mucho la atención previa de la Dra. Daryl y su puntualidad con el día y la hora acordada de forma previa y sobre todo su profesionalismo en la atención.<br>
+                                Hay atención y tratamiento de calidad 😎💯💯
+                            </p>
+                        </div>
+
+                        <div class="targeta">
+                            <div class="conteh1p">
+                                <img src="Imagenes Principales/PerfilesResenas/HCruz.jpeg">
+                                <h3>Hayde Cruz</h3>
+                            </div>
+                            <div class="star"><img src="Imagenes Principales/logos/stars.PNG"></div>
+                            <p>
+                                Experiencia agradable<br>
+                                Muy satisfecha
+                            </p>
+                        </div>
+
+                        <div class="targeta">
+                            <div class="conteh1p">
+                                <img src="Imagenes Principales/PerfilesResenas/JSamael.jpg">
+                                <h3>Jefferson Samael</h3>
+                            </div>
+                            <div class="star"><img src="Imagenes Principales/logos/stars.PNG"></div>
+                            <p>
+                                Me sentí muy cómodo desde que llegué 😊<br>
+                                La atención es muy amable y explican todo de forma clara. Se nota el profesionalismo 😁<br>
+                                Sin duda, esta es mi nueva clínica dental de confianza y la recomiendo totalmente 👏
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="btn-resenas" onclick="moverResenas(1)">&#10095;</button>
+
+        </div>
+
+    </div>
+
+    <div id="pantalla6" class="pantalla6">
+        <div class="tituloPantalla6">
+            <h1>¿Dónde ubicarnos?...</h1>
+        </div>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471.74012237538597!2d-88.16658701634238!3d14.302880000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f65ab4b622f4437%3A0xd50cccd3576d69dc!2sDental%20Gomez%20Clinica%20dental!5e1!3m2!1ses!2shn!4v1777085620551!5m2!1ses!2shn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <div id="pantalla7" class="pantalla7">
+        <div class="tituloPantalla7">
+            <h1>CONTACTANOS...</h1>
+            <h2>¿Cómo prefieres contactarnos?</h2>
+            <h3>Elige la opción que más te convenga</h3>
+        </div>
+        <div class="contactos">
+            <div class="contactanos1">
+                <section class="contacto">
+                    <h2>Formulario de contacto</h2>
+
+                    <form id="form-contacto">
+
+                        <input 
+                            type="text" 
+                            name="nombre" 
+                            placeholder="Tu nombre completo" 
+                            required
+                        >
+
+                        <input 
+                            type="email" 
+                            name="correo" 
+                            placeholder="tucorreo@ejemplo.com" 
+                            required
+                        >
+
+                        <input 
+                            type="tel" 
+                            name="telefono" 
+                            placeholder="+504 0000-0000" 
+                            required
+                        >
+
+                        <textarea 
+                            name="mensaje" 
+                            placeholder="¿En qué podemos ayudarte?" 
+                            required
+                        ></textarea>
+
+                        <button type="submit">Enviar mensaje</button>
+
+                    </form>
+                </section>
+            </div>
+
+            <div class="contactanos2">
+                <div class="subtitu7">
+                    <h2>Contacto directo</h2>
+                </div>
+                <div class="cDirecto">
+                    <div class="correo">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=daryl14gomez@gmail.com&su=Consulta desde la web" target="_blank">
+                            <button>
+                                <img src="Imagenes Principales/logos/gmail.jpg">
+                                <div>Enviar correo por Gmail</div>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="wasap">
+                        <a href="https://wa.me/50499040466" target="_blank">
+                            <button>
+                                <img src="Imagenes Principales/logos/wasap.png">
+                                <div>Enviar mensaje por WhatsApp</div>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="siguenos">
+                    <h2>Síguenos en redes sociales</h2>
+                </div>
+                <div class="redeSociales">
+                    <div class="ig">
+                        <a href="https://www.instagram.com/dentalgomezhn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                            <button>
+                                <img src="Imagenes Principales/logos/Instagram.png">
+                                <div>Instagram</div>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="face">
+                        <a href="https://www.facebook.com/Dentalgomezhn" target="_blank">
+                            <button>
+                                <img src="Imagenes Principales/logos/Facebook.webp">
+                                <div>Facebook</div>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+
+    <footer class="pie">
+        <p>
+            Dental Gomez | Dra. Daryl Gómez <br>
+            Cuidando tu sonrisa con profesionalismo<br>
+            © 2026 Todos los derechos reservados<br>
+        </p>
+    </footer>
+
+</body>
+
+</html>

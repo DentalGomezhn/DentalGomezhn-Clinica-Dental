@@ -1,0 +1,1111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: #FFFFFF; 
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0;
+    animation: aparecer 1s ease;
+} 
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================= privacidad ========================= */
+#overlay-privacidad {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#popup-privacidad {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 30px 28px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    font-family: "Source Sans 3", sans-serif;
+    text-align: center;
+}
+
+#popup-privacidad h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    color: #0F2747;
+    margin-bottom: 14px;
+}
+
+#popup-privacidad p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#mensaje-rechazo {
+    display: none;
+    background: #fff3cd;
+    border: 1px solid #e1bf7b;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #7a5200;
+    margin-bottom: 16px;
+}
+
+.popup-botones {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#btn-aceptar {
+    background: #1E6A7A;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn-aceptar:hover {
+    background: #155a68;
+}
+
+#btn-rechazar {
+    background: #f0f0f0;
+    color: #555;
+    border: 1px solid #ccc;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn-rechazar:hover {
+    background: #e0e0e0;
+}
+
+/* ========================= HEADER ========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e1bf7b;
+    padding: 12px 40px;
+    flex-wrap: wrap;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.ordenTextoImagen {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dienteLogo img {
+    width: 50px; 
+    height: auto; 
+    border-radius: 50%;
+}
+
+.headerTexto h1 {
+    font-family: "Playfair Display", serif;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #0F2747;
+    margin: 0;
+}
+
+.headerTexto h2 {
+    font-family: "Source Sans 3", sans-serif;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #0F2747;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    font-family: "Source Sans 3", sans-serif;
+    background-color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    color: #0F2747;
+    padding: 6px 14px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #604e2c;
+    color: #FFFFFF;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* ========================= INICIO ========================= */
+
+.inicio {
+    display: block;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.fotoLogo {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.fotoLogo img { 
+    width: 100%; 
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================= PANTALLA 2 ========================= */
+
+.pantalla2 {
+    background-color: #1E6A7A;
+    padding: 60px 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 2s ease;
+}
+
+.pantalla2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.textoPregunta h1 {
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+    font-size: clamp(22px, 4vw, 45px);
+    text-align: center;
+    font-weight: 800;
+    color: #0F2747;
+    margin: 0 0 50px 0;
+    padding: 18px 40px;
+    background-color: #FFFFFF;
+    border-radius: 100px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bloqueEleccion {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.informacionEleccion {
+    flex: 1;
+    min-width: 280px;
+}
+
+.informacionEleccion p {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: clamp(16px, 2vw, 20px);
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    line-height: 2;
+    color: #F4F6F8;
+    text-align: justify;
+    margin: 0;
+    padding: 0; 
+}
+
+.fotoDraCarrusel {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 25px;
+    border: 3px solid #C8A96B;
+    margin: 0 auto;
+}
+
+.tren {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.tren img {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* ========================= PANTALLA 3 ========================= */
+
+.pantalla3 {
+    background: radial-gradient(circle, #ffffff, #fcedd0);
+    padding: 60px 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 2s ease;
+}
+
+.pantalla3.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tituloPantalla3 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(22px, 4vw, 45px);
+    text-align: center;
+    font-weight: 800;
+    color: #b99c61;
+    margin: 0 0 50px 0;
+    padding: 18px 40px;
+    background-color: #FFFFFF;
+    border-radius: 100px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Servicios {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.fila1, .fila2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.fila1 img,
+.fila2 img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 4px solid #C8A96B;
+}
+
+.btn-boton {
+    display: inline-block;
+    background: #e1bf7d;
+    font-size: 16px;
+    color: #4B3621;
+    font-weight: 800;
+    width: 100%;
+    max-width: 260px;
+    padding: 12px 20px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 0 0 0;
+    border: 2px solid #b3965b;
+}
+
+.btn-boton:hover {
+    background: #8d6f40;
+    color: white;
+    font-weight: 800;
+}
+
+.odontoGeneral, .ortodoncia, .endodoncia,
+.cirugiaOral, .periodoncia, .odontopediatria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 220px;
+    max-width: 300px;
+}
+
+/* ========================= PANTALLA 4 ========================= */
+
+.pantalla4 {
+    background-color: #F9F7F2;
+    padding: 60px 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 2s ease;
+}
+
+.pantalla4.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tituloPantalla4 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(18px, 3vw, 35px);
+    text-align: center;
+    font-weight: 800;
+    color: #000000;
+    margin: 0 0 50px 0;
+    padding: 18px 20px;
+    background-color: #eae4d5;
+    border-radius: 100px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.faq {
+    width: 100%;
+    margin: 0;
+}
+
+.faq-item {
+    border-bottom: 2px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 18px 20px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(16px, 2.5vw, 22px);
+    font-weight: 500;
+    text-align: left;
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    font-size: 26px;
+    font-weight: 700;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 20px 25px 20px;
+    background: #fafafa;
+}
+
+.faq-answer p {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: clamp(15px, 2vw, 20px);
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+/* ========================= PANTALLA 5 ========================= */
+
+.pantalla5 {
+    background-color: #dac79c;
+    padding: 60px 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+    overflow: hidden;
+}
+
+.pantalla5.visible,
+.pantalla6.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tituloPantalla5 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(18px, 3vw, 30px);
+    text-align: center;
+    font-weight: 800;
+    color: #4B3621;
+    margin: 0 0 30px 0;
+    padding: 18px 20px;
+    background-color: #fff3df;
+    border-radius: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.google-box {
+    font-family: sans-serif;
+    background: #fff3df;
+    font-size: clamp(16px, 2vw, 22px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 1100px;
+    margin: 0 auto 30px auto;
+}
+
+.google-rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.google-rating img {
+    width: 90px;
+    height: 30px;
+}
+
+.btn-google {
+    font-size: clamp(14px, 2vw, 20px);
+    background-color: #69562e;
+    color: #f0eadc;
+    font-weight: 700;
+    padding: 12px 20px;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-google:hover {
+    background-color: #dac79c;
+    color: #4B3621;
+    transform: scale(1.05);
+}
+
+.resenas-outer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.resenas-wrapper {
+    flex: 1;
+    overflow: hidden;
+}
+
+.resenas {
+    display: flex;
+    width: 200%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.re1, .re2 {
+    display: flex;
+    gap: 40px;
+    flex-shrink: 0;
+    width: 50%;
+    margin-right: 40px;
+}
+
+.targeta {
+    position: relative;
+    min-width: calc(33.33% - 10px);
+    flex: 1;
+    font-family: sans-serif;
+    background: #fff3df;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px 40px 20px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    overflow: hidden;
+    height: 420px;
+}
+
+.targeta p {
+    margin-top: 10px;
+    padding: 8px 10px;
+    line-height: 1.5;
+    color: #4B3621;
+    font-size: clamp(13px, 1.5vw, 17px);
+}
+
+.targeta p.recortar {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+}
+
+.targeta p.expandido {
+    display: block;
+    overflow: visible;
+}
+
+.targeta.expandido {
+    height: auto;
+    overflow: visible;
+}
+
+.conteh1p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.conteh1p img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.star img {
+    margin-top: 10px;
+    width: 100px;
+    height: 20px;
+}
+
+.conteh1p h3 {
+    color: #4B3621;
+    margin: 0;
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+.btn-leer-mas {
+    bottom: 8px;
+    position: absolute;
+    left: 20px;
+    background: none;
+    border: none;
+    color: #4B3621;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.btn-leer-mas:hover {
+    color: #142a71;
+}
+
+.btn-resenas {
+    background: #ECDDBC;
+    border: 1px solid #c9a050;
+    font-size: 20px;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    z-index: 10;
+    flex-shrink: 0;
+    color: #4b3916;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-resenas:hover {
+    background: #c9a050;
+    color: #fff;
+}
+
+/* ========================= PANTALLA 6 ========================= */
+
+.pantalla6 {
+    background: radial-gradient(circle farthest-corner at center, #f0f4f6, #1b7a8a);
+    padding: 60px 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.tituloPantalla6 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(18px, 3vw, 30px);
+    text-align: center;
+    font-weight: 800;
+    color: #0f5260;
+    margin: 0 0 50px 0;
+    padding: 18px 20px;
+    background-color: #d4edf1;
+    border-radius: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mapa {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 10px;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ========================= PANTALLA 7 ========================= */
+
+.pantalla7 {
+    background-color: #cfe3e6;
+    padding: 60px 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 2s ease;
+}
+
+.pantalla7.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tituloPantalla7 h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(22px, 4vw, 40px);
+    text-align: center;
+    font-weight: 800;
+    color: #26494A;
+    padding: 18px;
+    background-color: #ffffff;
+    border-radius: 100px;
+    width: 100%;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+.tituloPantalla7 h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(18px, 3vw, 30px);
+    text-align: center;
+    font-weight: 800;
+    color: #394C49;
+    padding: 18px;
+    border-radius: 100px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tituloPantalla7 h3 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(16px, 2.5vw, 23px);
+    text-align: center;
+    font-weight: 800;
+    color: #5e767a;
+    padding: 10px 18px 18px;
+    border-radius: 100px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contactos {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 0;
+    flex-wrap: wrap;
+}
+
+.contactanos1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    flex-shrink: 0;
+}
+
+.contacto {
+    width: 100%;
+    max-width: 500px;
+    font-family: sans-serif;
+}
+
+.contacto h2 {
+    color: #2c6e73;
+    border-bottom: 2px solid #cfe3e6;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-contacto input,
+#form-contacto textarea {
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #cfe3e6;
+    background: #f4f7f8;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+}
+
+#form-contacto textarea {
+    resize: none;
+    height: 100px;
+}
+
+#form-contacto button {
+    background: #2c7a80;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#form-contacto button:hover {
+    background: #25686d;
+}
+
+.contactanos2 {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 500px;
+    flex-shrink: 0;
+}
+
+.subtitu7 h2 {
+    color: #2c6e73;
+    font-family: sans-serif;
+    font-size: 20px;
+    border-bottom: 2px solid #cfe3e6;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.siguenos h2 {
+    margin-top: 5px;
+    color: #2c6e73;
+    font-family: sans-serif;
+    font-size: 20px;
+    border-bottom: 2px solid #cfe3e6;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.cDirecto, .redeSociales {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.correo a, .wasap a, .ig a, .face a {
+    text-decoration: none;
+    width: 100%;
+}
+
+.correo button, .wasap button, .ig button, .face button {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1.5px solid;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.correo button img, .wasap button img, .ig button img, .face button img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.correo button { border-color: #c8dde2; background: #f0f4f6; color: #0f5260; }
+.wasap button  { border-color: #25d366; background: #f0fdf4; color: #166534; }
+.ig button     { border-color: #e1306c; background: #fff0f5; color: #8a0030; }
+.face button   { border-color: #1877f2; background: #f0f6ff; color: #0a4a9e; }
+
+.correo button:hover { background: #e0eaec; }
+.wasap button:hover  { background: #dcfce7; }
+.ig button:hover     { background: #ffe4ef; }
+.face button:hover   { background: #dbeafe; }
+
+/* ========================= FOOTER ========================= */
+
+.pie {
+    background-color: #1b7a8a;
+}
+
+.pie p {
+    font-family: "Playfair Display", serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px;
+    color: #f3fcfd;
+    text-align: center;
+}
+
+/* =========================
+   MEDIA QUERIES - TABLET (≤768px)
+========================= */
+@media (max-width: 768px) {
+
+    .header {
+        padding: 12px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        gap: 6px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .pantalla2 { padding: 40px 20px; }
+
+    .bloqueEleccion {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .fotoDraCarrusel {
+        width: 100%;
+        max-width: 100%;
+        height: 600px;
+    }
+
+    .tren img {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .pantalla3 { padding: 40px 20px; }
+
+    .fila1, .fila2 {
+        gap: 20px;
+    }
+
+    .odontoGeneral, .ortodoncia, .endodoncia,
+    .cirugiaOral, .periodoncia, .odontopediatria {
+        min-width: 160px;
+    }
+
+    .fila1 img, .fila2 img {
+        max-width: 180px;
+    }
+
+    .btn-boton {
+        max-width: 200px;
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .pantalla4 { padding: 40px 15px; }
+
+    .faq-question { padding: 15px 15px; }
+    .faq-answer   { padding: 0 15px 20px 15px; }
+
+    .pantalla5 { padding: 40px 10px; }
+
+    .resenas-outer { gap: 6px; }
+
+    .re1, .re2 { gap: 10px; }
+
+    /* Tablet: 3 tarjetas visibles, tamaño justo */
+    .targeta {
+        min-width: calc(33.33% - 7px);
+        flex: 1;
+        height: auto;
+        min-height: 280px;
+        padding: 15px 12px 40px 12px;
+    }
+
+    .targeta p { font-size: 13px; padding: 6px 8px; }
+    .conteh1p h3 { font-size: 14px; }
+    .btn-leer-mas { font-size: 13px; left: 12px; }
+
+    .btn-resenas {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .pantalla6 { padding: 40px 15px; }
+
+    .mapa iframe { height: 300px; }
+
+    .pantalla7 { padding: 40px 20px; }
+
+    .contactos { gap: 30px; padding: 30px 0; }
+}
+
+/* =========================
+   MEDIA QUERIES - MÓVIL (≤480px)
+========================= */
+@media (max-width: 480px) {
+
+    .header {
+        padding: 10px 15px;
+    }
+
+    .headerTexto h1 { font-size: 16px; letter-spacing: 1px; }
+    .headerTexto h2 { font-size: 11px; }
+
+    nav ul { gap: 4px; }
+    nav a  { font-size: 10px; padding: 4px 8px; }
+
+    .textoPregunta h1 {
+        border-radius: 20px;
+        padding: 12px 15px;
+    }
+
+    .informacionEleccion p { font-size: 14px; line-height: 1.7; }
+
+    .fotoDraCarrusel { height: 300px; }
+
+    .tituloPantalla3 { font-size: 20px; padding: 12px 15px; border-radius: 20px; }
+    .tituloPantalla4 { font-size: 16px; padding: 12px 15px; border-radius: 20px; }
+
+    .faq-question { font-size: 14px; padding: 13px 12px; }
+    .faq-answer p { font-size: 13px; }
+
+    .fila1, .fila2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .odontoGeneral, .ortodoncia, .endodoncia,
+    .cirugiaOral, .periodoncia, .odontopediatria {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .fila1 img, .fila2 img {
+        max-width: 240px;
+        width: 100%;
+    }
+
+    .btn-boton { max-width: 240px; font-size: 14px; }
+
+    /* Móvil: 1 tarjeta por slide — JS controla el desplazamiento */
+    .re1, .re2 {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .targeta {
+        min-width: 100%;
+        width: 100%;
+        flex-shrink: 0;
+        font-size: 13px;
+        padding: 14px 12px 48px 12px;
+        height: auto;
+        min-height: 200px;
+    }
+
+    .targeta p { font-size: 17px; padding: 4px 6px; }
+    .conteh1p h3 { font-size: 13px; }
+    .conteh1p img { width: 32px; height: 32px; }
+    .star img { width: 80px; height: 16px; }
+    .btn-leer-mas { font-size: 12px; left: 12px; }
+
+    .tituloPantalla5,
+    .tituloPantalla6,
+    .tituloPantalla7 h1,
+    .tituloPantalla7 h2,
+    .tituloPantalla7 h3 {
+        border-radius: 20px;
+        padding: 12px 15px;
+    }
+
+    .tituloPantalla5 { font-size: 16px; }
+    .tituloPantalla6 { font-size: 16px; }
+    .tituloPantalla7 h1 { font-size: 20px; }
+    .tituloPantalla7 h2 { font-size: 16px; }
+    .tituloPantalla7 h3 { font-size: 14px; }
+
+    .google-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-google { width: 100%; text-align: center; font-size: 14px; }
+
+    .mapa iframe { height: 250px; }
+
+    .contactanos1, .contactanos2 {
+        max-width: 100%;
+    }
+
+    .pantalla7 { padding: 30px 15px; }
+}
